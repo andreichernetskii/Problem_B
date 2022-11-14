@@ -1,4 +1,4 @@
-#####<Task from ACM contest 2009>
+##### <Task from ACM contest 2009>
 
 Problem B
 My Bad
