@@ -38,8 +38,8 @@ containing three zeros.
 #### Output.
 For each circuit in the input, print its case number (starting with 1), followed by a colon and a blank, and then
 the circuit analysis, which will be one of the following (with # replaced by the appropriate gate number):
-..* No faults detected
-..* Gate # is failing; output inverted
-..* Gate # is failing; output stuck at 0
-..* Gate # is failing; output stuck at 1
-..* Unable to totally classify the failure
+⋅⋅* No faults detected
+⋅⋅* Gate # is failing; output inverted
+⋅⋅* Gate # is failing; output stuck at 0
+⋅⋅* Gate # is failing; output stuck at 1
+⋅⋅* Unable to totally classify the failure
