@@ -20,7 +20,7 @@ may not always be possible.
 ***
 #### Input.
 The input consists of multiple test cases, each representing a circuit with input and output descriptions. Each test
-case has the following parts in order.
+case has the following parts in order:
 1. A line containing three positive integers giving the number of inputs (N ≤ 8), the number of gates (G ≤ 19),
 and the number of outputs (U ≤ 19) in the circuit.
 2. One line of input for each gate. The first line describes gate g1. If there are several gates, the next line
@@ -38,8 +38,8 @@ containing three zeros.
 #### Output.
 For each circuit in the input, print its case number (starting with 1), followed by a colon and a blank, and then
 the circuit analysis, which will be one of the following (with # replaced by the appropriate gate number):
-No faults detected
-Gate # is failing; output inverted
-Gate # is failing; output stuck at 0
-Gate # is failing; output stuck at 1
-Unable to totally classify the failure
+..* No faults detected
+..* Gate # is failing; output inverted
+..* Gate # is failing; output stuck at 0
+..* Gate # is failing; output stuck at 1
+..* Unable to totally classify the failure
