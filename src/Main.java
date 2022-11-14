@@ -22,12 +22,13 @@ import java.io.FileNotFoundException;
  */
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("src/gatesTask");
-        if (file.exists()) {
+    public static void main(String[] args) {
+        try {
+            File file = new File("src/dataSet");
             Task task = new Task();
             task.Analysis(file);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
         }
-        else System.out.println("File not found");
     }
 }
