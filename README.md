@@ -1,7 +1,8 @@
-##### <Task from ACM contest 2009>
+< Task from ACM contest 2009 >
 ***
 ## Problem B
 ### My Bad
+< Input file: src/dataSet >
 
 A logic circuit maps its input through various gates to its output with no feedback loops in the circuit. The input
 and output are an ordered set of logical values, represented here by ones and zeros. The circuits we consider are
