@@ -1,7 +1,7 @@
 ##### <Task from ACM contest 2009>
 ***
-### Problem B
-#### My Bad
+## Problem B
+### My Bad
 
 A logic circuit maps its input through various gates to its output with no feedback loops in the circuit. The input
 and output are an ordered set of logical values, represented here by ones and zeros. The circuits we consider are
