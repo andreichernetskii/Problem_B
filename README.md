@@ -17,6 +17,7 @@ You must write a program that analyzes a circuit and a number of observations of
 the circuit is performing correctly or incorrectly. If at least one set of inputs produces the wrong output, your
 program must also attempt to determine the unique failing gate and the way in which this gate is failing. This
 may not always be possible.
+***
 Input
 The input consists of multiple test cases, each representing a circuit with input and output descriptions. Each test
 case has the following parts in order.
@@ -33,6 +34,7 @@ three outputs, and u1 comes from g5, u2 from g1, and u3 from g4, then the line w
 giving the corresponding observed output values. No two observations have the same input values.
 Consecutive entries on any line of the input are separated by a single space. The input is terminated with a line
 containing three zeros.
+***
 Output
 For each circuit in the input, print its case number (starting with 1), followed by a colon and a blank, and then
 the circuit analysis, which will be one of the following (with # replaced by the appropriate gate number):
