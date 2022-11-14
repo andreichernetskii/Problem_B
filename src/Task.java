@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Task {
     Creator creator;
     Circuit circuit;
-    String[][] gates;   // information about gates connections
-    String[][] tests;   // information about tests
+    String[][] gates;   // information about gates connections - [number of gates][types of gates]
+    String[][] tests;   // information about tests - [number of tests][values]
     int[] circuitSize;    // first line of task what describing a circuit in data set
     int[] outputsConnectTo; // information about outputs connections
     int numberOfTests;
