@@ -1,7 +1,6 @@
 < Task from ACM contest 2009 >
 ***
-## Problem B
-### My Bad
+### Problem B
 < Input file: src/dataSet >
 
 A logic circuit maps its input through various gates to its output with no feedback loops in the circuit. The input
@@ -10,6 +9,8 @@ comprised of and gates (which output 1 only when their two inputs are both 1), o
 one or both of their inputs are 1), exclusive or (xor) gates (which output 1 only when exactly one of the two
 inputs is 1), and not gates (which output the complement of their single input). The figures below show two
 circuits.
+
+![Screenshot from 2022-11-14 18-36-56](https://user-images.githubusercontent.com/73879364/201728086-4261f551-fee5-4918-8a07-f0d4f29c0a48.png)
 
 Unfortunately, real gates sometimes fail. Although the failures may occur in many different ways, this problem
 limits attention to gates that fail in one of three ways: 1) always inverting the correct output, 2) always yielding
@@ -44,3 +45,4 @@ the circuit analysis, which will be one of the following (with # replaced by the
 * Gate # is failing; output stuck at 0
 * Gate # is failing; output stuck at 1
 * Unable to totally classify the failure
+
