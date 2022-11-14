@@ -18,7 +18,7 @@ the circuit is performing correctly or incorrectly. If at least one set of input
 program must also attempt to determine the unique failing gate and the way in which this gate is failing. This
 may not always be possible.
 ***
-Input
+#### Input.
 The input consists of multiple test cases, each representing a circuit with input and output descriptions. Each test
 case has the following parts in order.
 1. A line containing three positive integers giving the number of inputs (N ≤ 8), the number of gates (G ≤ 19),
@@ -35,7 +35,7 @@ giving the corresponding observed output values. No two observations have the sa
 Consecutive entries on any line of the input are separated by a single space. The input is terminated with a line
 containing three zeros.
 ***
-Output
+#### Output.
 For each circuit in the input, print its case number (starting with 1), followed by a colon and a blank, and then
 the circuit analysis, which will be one of the following (with # replaced by the appropriate gate number):
 No faults detected
