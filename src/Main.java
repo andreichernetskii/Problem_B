@@ -26,7 +26,7 @@ public class Main {
         try {
             File file = new File("src/dataSet");
             Task task = new Task();
-            task.Analysis(file);
+            task.analysis(file);
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
         }
