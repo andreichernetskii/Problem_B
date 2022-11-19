@@ -1,5 +1,6 @@
 class GateOr extends Gate {
     public GateOr() {
-        gateFunction = new OrFunction();
+        this.gateFunction = new OrFunction();
+        this.output = this.gateFunction.gateFunction(input);
     }
 }

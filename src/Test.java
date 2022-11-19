@@ -1,5 +1,6 @@
 /**
- * Testing Circuit's work
+ * Testing Circuit's work:
+ * starts circuit and test results
  */
 
 public class Test {

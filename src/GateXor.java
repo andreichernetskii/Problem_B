@@ -1,5 +1,6 @@
 public class GateXor extends Gate {
     public GateXor() {
-        gateFunction = new XorFunction();
+        this.gateFunction = new XorFunction();
+        this.output = this.gateFunction.gateFunction(input);
     }
 }

@@ -1,5 +1,6 @@
 public class GateNot extends Gate {
     public GateNot() {
-        gateFunction = new NotFunction();
+        this.gateFunction = new NotFunction();
+        this.output = this.gateFunction.gateFunction(input);
     }
 }
