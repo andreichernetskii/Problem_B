@@ -48,7 +48,7 @@ public class Creator {
             circuit.gates[i].gates = new GateWithConnections[circuit.gates.length - 1];
 
             // connecting gates to another gates
-            for (int j = 0; j < circuit.gates.length - 1; j++) {
+            for (int j = 0; j < gates[i].length - 1; j++) {
                 // index of gate connected to. example: g1 -> 1 it's a number of gate. index = 1 - 1;
                 int connectedToInfo = Integer.parseInt(gates[i][j + 1].substring(1)) - 1;
                 if (gates[i][j + 1].charAt(0) == 'i')   // in case if gate has connected to input gate
