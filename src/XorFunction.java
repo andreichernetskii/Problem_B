@@ -17,7 +17,7 @@ public class XorFunction implements IGateFunction{
         }
         else {
             int countingEvenNumbers = 0;
-            for (boolean i : inputArray) if (i == true) countingEvenNumbers++;
+            for (boolean i : inputArray) if (i) countingEvenNumbers++;
             if (countingEvenNumbers % 2 == 0) return false;
         }
         return true;

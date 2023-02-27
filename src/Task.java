@@ -42,7 +42,8 @@ public class Task {
 
     private void creatingTask() {
         creator = new Creator();
-//        circuit = creator.creatingCircuit();
+        // creating circuit
+        circuit = creator.creatingCircuit(circuitSize, gates, outputsConnectedTo);
         // creating tests
         tests = new Test[numberOfTests];
         for (int i = 0; i < tests.length; i++) {
