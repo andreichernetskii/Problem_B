@@ -13,10 +13,7 @@ public class Test {
     }
 
     public void startTest(Circuit circuit) {
-        for (int i = 0; i < 100; i++) {
-        }
-        circuit.gates[2].gate.startFunction();
-        checkingResult();
+        checkingResult(circuit.start(circuit, inputs));
     }
 
     // what the result of circuit work

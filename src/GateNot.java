@@ -10,7 +10,7 @@ public class GateNot extends Gate {
 //    }
 
     @Override
-    public void startFunction() {
-
+    public boolean startFunction() {
+        return false;
     }
 }

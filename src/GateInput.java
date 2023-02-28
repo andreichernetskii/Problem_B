@@ -10,7 +10,12 @@ public class GateInput extends Gate {
 //    }
 
     @Override
-    public void startFunction() {
+    public boolean startFunction() {
+        this.gateFunction = new InputFunction();
+        return this.gateFunction.gateFunction(input);
+    }
 
+    public void castToArray(boolean val) {
+        this.input[0] = val;
     }
 }

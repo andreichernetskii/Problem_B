@@ -10,7 +10,7 @@ class GateOr extends Gate {
 //    }
 
     @Override
-    public void startFunction() {
-
+    public boolean startFunction() {
+        return false;
     }
 }

@@ -24,7 +24,7 @@ public class Creator {
         for (int i = 0; i < circuit.gates.length; i++) {
             circuit.gates[i] = new GateWithConnections();
             circuit.gates[i].gate = gateCreating(gates[i][0]); // gate's type contains inside first index of array
-            circuit.gates[i].gates = new GateWithConnections[circuit.gates.length - 1];
+            circuit.gates[i].gates = new GateWithConnections[circuit.gates.length];
 
             // connecting gates to another gates
             for (int j = 0; j < gates[i].length - 1; j++) {

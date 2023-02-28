@@ -7,10 +7,9 @@ public class GateAnd extends Gate {
 //    public void setInput(boolean[] input) {
 //        this.input = input;
 //    }
-
     @Override
-    public void startFunction() {
+    public boolean startFunction() {
         this.gateFunction = new AndFunction();
-        this.output = this.gateFunction.gateFunction(input);
+        return this.gateFunction.gateFunction(input);
     }
 }
