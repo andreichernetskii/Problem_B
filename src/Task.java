@@ -12,6 +12,8 @@ public class Task {
     int[] outputsConnectedTo; // information about outputs connections
     int numberOfTests;
 
+
+    // data analysis from dataSet file parsing
     public void analysis(File file) throws FileNotFoundException {
         Scanner scanner = new Scanner(file.getAbsoluteFile());
         String[] dataString;
@@ -48,6 +50,11 @@ public class Task {
         tests = new Test[numberOfTests];
         for (int i = 0; i < tests.length; i++) {
             tests[i] = creator.creatingTest(testsData[i], circuitSize);
+            startTask(circuit, tests[i]);
         }
+    }
+
+    private void startTask(Circuit circuit, Test test) {
+        test.startTest(circuit);
     }
 }

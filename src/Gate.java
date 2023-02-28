@@ -1,10 +1,13 @@
 public abstract class Gate {
-    boolean[] input; // data from previous gates (inputs like a gates too)
-    boolean output; // result of gate function ??
+    protected boolean[] input; // data from previous gates (inputs like a gates too)
+    protected boolean output; // result of gate function ??
     IGateFunction gateFunction;
 
-    public void performFunction() {
-        gateFunction.gateFunction(input);
-    }
+//    public void performFunction() {
+//        gateFunction.gateFunction(input);
+//    }
+//    public abstract void setInput(boolean[] input);
+    public abstract void startFunction();
+
 }
 

@@ -5,27 +5,6 @@ public class Creator {
     Circuit circuit;
     Test test;
 
-    // here creating the Test
-    public Test creatingTest(String[] testsData, int[] circuitSize) {
-        int inputsAmount = circuitSize[0];
-        int outputsAmount = circuitSize[2];
-        boolean[] inputsToTestConstructor = new boolean[inputsAmount];
-        boolean[] outputsToTestConstructor = new boolean[outputsAmount];
-
-        // getting elements from array with information about tests "testData"
-        // and casting it to boolean array
-        // and sending it to Test constructor
-        for (int i = 0; i < inputsToTestConstructor.length; i++) {
-            inputsToTestConstructor[i] = (testsData[i].equals("0")) ? false : true;
-        }
-        for (int i = 0; i < outputsToTestConstructor.length; i++) {
-            outputsToTestConstructor[i] = (testsData[i + inputsAmount].equals("0")) ? false : true;
-        }
-
-        test = new Test(inputsToTestConstructor, outputsToTestConstructor);
-        return test;
-    }
-
     // here creating the Circuit
     public Circuit creatingCircuit(int[] circuitSize, String[][] gates, int[] outputsConnectTo) {
         // String[][] gates -> information about gates connections - [number of gate][types of gate]
@@ -77,5 +56,27 @@ public class Creator {
             case "x" -> new GateXor();
             default -> null;
         };
+    }
+
+    // here creating the Test
+    public Test creatingTest(String[] testsData, int[] circuitSize) {
+        int inputsAmount = circuitSize[0];
+        int outputsAmount = circuitSize[2];
+        boolean[] inputsToTestConstructor = new boolean[inputsAmount];
+        boolean[] outputsToTestConstructor = new boolean[outputsAmount];
+
+        // getting elements from array with information about tests "testData"
+        // and casting it to boolean array
+        // and sending it to Test constructor
+        for (int i = 0; i < inputsToTestConstructor.length; i++) {
+            inputsToTestConstructor[i] = (testsData[i].equals("0")) ? false : true;
+        }
+        for (int i = 0; i < outputsToTestConstructor.length; i++) {
+            outputsToTestConstructor[i] = (testsData[i + inputsAmount].equals("0")) ? false : true;
+        }
+
+        // calling test constructor
+        test = new Test(inputsToTestConstructor, outputsToTestConstructor);
+        return test;
     }
 }
