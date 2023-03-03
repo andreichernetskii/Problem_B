@@ -10,7 +10,7 @@ public class Circuit {
         boolean[] result = new boolean[circuit.outputs.length];
         // putting input data to the input gate
         for (int i = 0; i < inputData.length; i++) {
-            ((GateInput)circuit.inputs[i].gate).castToArray(inputData[i]);
+            ((GateInput)circuit.inputs[i].gate).castToArray(inputData[i]); // а что я тут сделал вообще? ПРОАНАЛИЗИРОВАТЬ. однако, вроде, норм
         }
 
         //
@@ -21,13 +21,24 @@ public class Circuit {
     }
 
     private boolean gatesWork(GateWithConnections gwc) {
-//        gwc.gates
-        while (gwc.gates.length < 2 || !gwc.gates[0].gate.gateFunctionDone) {
-            return gatesWork(gwc.gates[0]);
-        }
-        gwc.gate.input = gwc.gates[0].gate.startFunction();
-        gwc.gate.gateFunctionDone = true;
+        boolean result = false;
 
-        return gwc.gate.gateFunction(gwc.gates[0].gate.output); // here is no output definition
+        // тут у нас односвязный список и надо использвать if а не while
+        GateWithConnections startPoint = gwc; // start gate from which we are starting step up
+        GateWithConnections nowGate = gwc;  // gate where we are
+        GateWithConnections nextGate = gwc.gates[0]; // next gate
+        // берем выход с предыдущей брамки и пихаем в функцию текущей
+
+        while (nowGate.gates.length < 2 || !nextGate.gate.gateFunctionDone) {
+            nowGate = nextGate;
+        }
+
+        for (int i = 0; i < nowGate.gates.length; i++) {
+            nowGate.gate.input[i] = nextGate.gate.startFunction();
+            nextGate.gate.gateFunctionDone = true;
+        }
+
+        if (nowGate.gate.gateFunction == null) return result = nowGate.gate.input[0];
+        return gatesWork(startPoint);
     }
 }
