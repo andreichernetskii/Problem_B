@@ -1,4 +1,4 @@
-### Worl in progress
+### Work in progress
 
 < Task from ACM contest 2009 >
 ***
