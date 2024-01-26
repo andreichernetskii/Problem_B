@@ -1,4 +1,5 @@
-### Work in progress
+> [!IMPORTANT]
+> Work in progress
 
 < Task from ACM contest 2009 >
 ***
